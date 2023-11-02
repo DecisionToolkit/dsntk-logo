@@ -1,5 +1,9 @@
-**DSNTK** | Decision Toolkit
+**DsnTk** | Decision Toolkit
 
-## DSNTK Logo
+## Logo
 
 # Overview
+
+Generates **DsnTk** logo in SVG format.
+
+# License
