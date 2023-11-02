@@ -1,6 +1,6 @@
 **DsnTk** | Decision Toolkit
 
-## DsnTk Logo
+## Logo generator
 
 # Overview
 
