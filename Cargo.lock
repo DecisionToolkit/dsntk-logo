@@ -4,7 +4,9 @@ version = 3
 
 [[package]]
 name = "domrs"
-version = "0.0.6"
+version = "0.0.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "be28bd18638a361720a046498513cb9f40855e817bc2f188af5acbb6335de78a"
 
 [[package]]
 name = "dsntk-logo"
