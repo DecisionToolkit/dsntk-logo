@@ -15,7 +15,9 @@
 
 ## Overview
 
-Generates **DSNTK** logo in SVG format.
+Generates **DSNTK** logo in SVG format, like shown below:
+
+![dsntk-logo](./dsntk-logo.svg)
 
 ## License
 
