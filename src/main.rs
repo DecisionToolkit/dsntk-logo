@@ -1,3 +1,4 @@
+use domrs::{HtmlBodyElement, HtmlDocument, HtmlElement, HtmlHeadElement, HtmlLinkElement};
 use std::f64::consts::PI;
 use std::fmt::Write;
 use std::{fmt, fs};
@@ -117,5 +118,17 @@ fn write_logo(buffer: &mut dyn Write) -> Result<(), fmt::Error> {
 fn main() {
   let mut buffer = String::new();
   write_logo(&mut buffer).unwrap();
-  fs::write("./target/dsntk-logo.html", buffer).expect("writing file failed");
+  fs::write("./out/dsntk-logo.html", buffer).expect("writing file failed");
+
+  let head = HtmlHeadElement::default()
+    .with_charset("UTF-8")
+    .with_title("DSNTK LOGO")
+    .with_link(HtmlLinkElement::default().with_stylesheet("https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Dosis:wght@600&display=swap"));
+
+  let mut body = HtmlBodyElement::default();
+  body.add_child(HtmlElement::new("div"));
+
+  let html = HtmlDocument::new("en", head.into(), body.into());
+
+  html.save("./out/logo.html").expect("writing file failed");
 }
