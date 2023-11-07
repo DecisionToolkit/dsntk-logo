@@ -2,6 +2,10 @@
 
 # Logo generator
 
+[![MIT licensed][mit-badge]][mit-url]
+[![Apache 2.0 licensed][apache-badge]][apache-url]
+[![Contributor Covenant][cc-badge]][cc-url]
+
 [mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg
 [mit-url]: https://github.com/dsntk/dsntk-rs/blob/main/LICENSE-MIT
 [apache-badge]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
