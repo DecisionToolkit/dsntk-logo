@@ -7,15 +7,18 @@
 [![Contributor Covenant][cc-badge]][cc-url]
 
 [mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg
-[mit-url]: https://github.com/dsntk/dsntk-rs/blob/main/LICENSE-MIT
+[mit-url]: https://opensource.org/licenses/MIT
+[mit-license-url]: LICENSE-MIT
 [apache-badge]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
-[apache-url]: https://github.com/dsntk/dsntk-rs/blob/main/LICENSE-APACHE
+[apache-url]: https://www.apache.org/licenses/LICENSE-2.0
+[apache-license-url]: LICENSE
+[apache-notice-url]: NOTICE
 [cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
 [cc-url]: https://github.com/dsntk/dsntk-rs/blob/main/CODE_OF_CONDUCT.md
 
 ## Overview
 
-Generates **DSNTK** logo in SVG format, like shown below:
+Generates **DSNTK** logo in SVG format, similar like the one shown below:
 
 ![dsntk-logo](./dsntk-logo.svg)
 
@@ -23,8 +26,8 @@ Generates **DSNTK** logo in SVG format, like shown below:
 
 Licensed under either of
 
-- [MIT license](https://opensource.org/licenses/MIT) ([LICENSE-MIT][mit-url]), or
-- [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) ([LICENSE-APACHE][apache-url])
+- [MIT license][mit-url] (see [LICENSE-MIT][mit-license-url]) or
+- [Apache License, Version 2.0][apache-url] (see [LICENSE][apache-license-url] and [NOTICE][apache-notice-url])
 
 at your option.
 
