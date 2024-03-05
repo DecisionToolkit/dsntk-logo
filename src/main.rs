@@ -1,13 +1,9 @@
-use domrs::{HtmlBodyElement, HtmlDocument, HtmlElement, HtmlHeadElement, HtmlLinkElement, SvgDocument, SvgNumber};
+use domrs::{HtmlBodyElement, HtmlDocument, HtmlElement, HtmlHeadElement, SvgDocument, SvgNumber};
 use std::f64::consts::PI;
 use std::fmt::Write;
 
 const BG_COLOR: &str = "#336633";
 const FG_COLOR: &str = "#99CC00";
-const STROKE_COLOR: &str = "#C6FF00";
-const FONT: &str = "https://fonts.googleapis.com/css2?family=Sarabun:wght@800&display=swap";
-const FONT_FAMILY: &str = "Sarabun";
-const FONT_WEIGHT: &str = "800";
 
 /// Converts degrees into radians.
 fn deg_to_rad(deg: f64) -> f64 {
@@ -66,20 +62,7 @@ fn create_svg_line(x1: f64, y1: f64, x2: f64, y2: f64, bg_color: &str, line_widt
   line
 }
 
-fn create_svg_text(x: f64, y: f64, s: &str, font_size: f64) -> HtmlElement {
-  let mut text = HtmlElement::new("text");
-  text.set_attribute("x", format!("{:.1}", x));
-  text.set_attribute("y", format!("{:.1}", y));
-  text.set_attribute("font-family", FONT_FAMILY);
-  text.set_attribute("font-weight", FONT_WEIGHT);
-  text.set_attribute("font-size", SvgNumber::new(font_size, 0));
-  text.set_attribute("fill", BG_COLOR);
-  text.set_attribute("stroke", STROKE_COLOR);
-  text.set_attribute("stroke-width", "4");
-  text.content(s)
-}
-
-fn create_svg(width: f64, height: f64, line_width: f64, text_pos: (f64, f64, f64, f64), font_size: f64) -> HtmlElement {
+fn create_svg(width: f64, height: f64, line_width: f64) -> HtmlElement {
   let mut svg: HtmlElement = SvgDocument::new()
     .default_namespace()
     .width(SvgNumber::new(width, 1))
@@ -128,18 +111,13 @@ fn create_svg(width: f64, height: f64, line_width: f64, text_pos: (f64, f64, f64
     BG_COLOR,
     line_width,
   ));
-  svg.add_child(create_svg_text(text_pos.0, text_pos.1, "Decision", font_size));
-  svg.add_child(create_svg_text(text_pos.2, text_pos.3, "Toolkit", font_size));
   svg
 }
 
 fn main() {
-  let head = HtmlHeadElement::default()
-    .charset("UTF-8")
-    .title("DSNTK LOGO")
-    .link(HtmlLinkElement::default().stylesheet(FONT));
+  let head = HtmlHeadElement::default().charset("UTF-8").title("DSNTK LOGO");
   let mut body = HtmlBodyElement::default();
-  body.add_child(create_svg(700.0, 700.0, 7.0, (107.0, 330.0, 176.0, 440.0), 125.0));
+  body.add_child(create_svg(700.0, 700.0, 7.0));
   let doc = HtmlDocument::new().default_doctype().default_language().default_namespace().head(head).body(body);
   doc.save("./out/dsntk-logo.html", 0, 2).expect("writing file failed");
 }
