@@ -5,9 +5,9 @@ use std::fmt::Write;
 const BG_COLOR: &str = "#336633";
 const FG_COLOR: &str = "#99CC00";
 const STROKE_COLOR: &str = "#C6FF00";
-const FONT: &str = "https://fonts.googleapis.com/css2?family=Sarabun:wght@700&display=swap";
+const FONT: &str = "https://fonts.googleapis.com/css2?family=Sarabun:wght@800&display=swap";
 const FONT_FAMILY: &str = "Sarabun";
-const FONT_WEIGHT: &str = "700";
+const FONT_WEIGHT: &str = "800";
 
 /// Converts degrees into radians.
 fn deg_to_rad(deg: f64) -> f64 {
@@ -139,7 +139,7 @@ fn main() {
     .title("DSNTK LOGO")
     .link(HtmlLinkElement::default().stylesheet(FONT));
   let mut body = HtmlBodyElement::default();
-  body.add_child(create_svg(700.0, 700.0, 7.0, (120.0, 330.0, 188.0, 440.0), 120.0));
+  body.add_child(create_svg(700.0, 700.0, 7.0, (107.0, 330.0, 176.0, 440.0), 125.0));
   let doc = HtmlDocument::new().default_doctype().default_language().default_namespace().head(head).body(body);
   doc.save("./out/dsntk-logo.html", 0, 2).expect("writing file failed");
 }
