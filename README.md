@@ -7,20 +7,28 @@
 [![Contributor Covenant][cc-badge]][cc-url]
 
 [mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg
+
 [mit-url]: https://opensource.org/licenses/MIT
+
 [mit-license-url]: LICENSE-MIT
+
 [apache-badge]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
+
 [apache-url]: https://www.apache.org/licenses/LICENSE-2.0
+
 [apache-license-url]: LICENSE
+
 [apache-notice-url]: NOTICE
+
 [cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
+
 [cc-url]: https://github.com/dsntk/dsntk-rs/blob/main/CODE_OF_CONDUCT.md
 
 ## Overview
 
 Generates a **DSNTK** logo in SVG format, similar to the one shown below:
 
-![dsntk-logo](./dsntk-logo.svg)
+![dsntk-logo](./dsntk-logo.png)
 
 ## License
 
