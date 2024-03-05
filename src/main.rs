@@ -4,7 +4,7 @@ use std::fmt::Write;
 
 const BG_COLOR: &str = "#336633";
 const FG_COLOR: &str = "#99CC00";
-const TEXT_COLOR: &str = "#C6FF00";
+const STROKE_COLOR: &str = "#C6FF00";
 const FONT: &str = "https://fonts.googleapis.com/css2?family=Sarabun:wght@700&display=swap";
 const FONT_FAMILY: &str = "Sarabun";
 const FONT_WEIGHT: &str = "700";
@@ -74,7 +74,7 @@ fn create_svg_text(x: f64, y: f64, s: &str, font_size: f64) -> HtmlElement {
   text.set_attribute("font-weight", FONT_WEIGHT);
   text.set_attribute("font-size", SvgNumber::new(font_size, 0));
   text.set_attribute("fill", BG_COLOR);
-  text.set_attribute("stroke", TEXT_COLOR);
+  text.set_attribute("stroke", STROKE_COLOR);
   text.set_attribute("stroke-width", "4");
   text.content(s)
 }
@@ -138,9 +138,8 @@ fn main() {
     .charset("UTF-8")
     .title("DSNTK LOGO")
     .link(HtmlLinkElement::default().stylesheet(FONT));
-
   let mut body = HtmlBodyElement::default();
-  body.add_child(create_svg(700.0, 700.0, 9.0, (120.0, 330.0, 182.0, 440.0), 120.0));
+  body.add_child(create_svg(700.0, 700.0, 7.0, (120.0, 330.0, 188.0, 440.0), 120.0));
   let doc = HtmlDocument::new().default_doctype().default_language().default_namespace().head(head).body(body);
   doc.save("./out/dsntk-logo.html", 0, 2).expect("writing file failed");
 }
