@@ -18,7 +18,7 @@
 
 ## Overview
 
-Generates **DSNTK** logo in SVG format, similar like the one shown below:
+Generates a **DSNTK** logo in SVG format, similar to the one shown below:
 
 ![dsntk-logo](./dsntk-logo.svg)
 
