@@ -28,7 +28,7 @@
 
 Generates a **DSNTK** logo in SVG format, similar to the one shown below:
 
-![dsntk-logo](./dsntk-logo.svg)
+![dsntk-logo](./decision-toolkit.svg)
 
 ## License
 
