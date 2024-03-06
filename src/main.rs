@@ -2,8 +2,16 @@ use domrs::{HtmlBodyElement, HtmlDocument, HtmlElement, HtmlHeadElement, SvgDocu
 use std::f64::consts::PI;
 use std::fmt::Write;
 
-const BG_COLOR: &str = "#336633";
-const FG_COLOR: &str = "#99CC00";
+type Palette = (&'static str, &'static str);
+
+//const PALETTE_GREEN: Palette = ("#00C853", "#1B5E20");
+const PALETTE_LIGHT_GREEN: Palette = ("#64DD17", "#33691E");
+//const PALETTE_BLUE: Palette = ("#2962FF", "#0D47A1");
+const PALETTE_LIGHT_BLUE: Palette = ("#00B0FF", "#01579B");
+const PALETTE_PURPLE: Palette = ("#EA80FC", "#4A148C");
+//const PALETTE_DEEP_PURPLE: Palette = ("#651FFF", "#311B92");
+const PALETTE_YELLOW: Palette = ("#FFEA00", "#F57F17");
+const PALETTE_DEEP_ORANGE: Palette = ("#FF9E80", "#BF360C");
 
 /// Converts degrees into radians.
 fn deg_to_rad(deg: f64) -> f64 {
@@ -62,7 +70,7 @@ fn create_svg_line(x1: f64, y1: f64, x2: f64, y2: f64, bg_color: &str, line_widt
   line
 }
 
-fn create_svg(width: f64, height: f64, line_width: f64) -> HtmlElement {
+fn create_svg(width: f64, height: f64, line_width: f64, palette: Palette) -> HtmlElement {
   let mut svg: HtmlElement = SvgDocument::new()
     .default_namespace()
     .width(SvgNumber::new(width, 1))
@@ -71,19 +79,19 @@ fn create_svg(width: f64, height: f64, line_width: f64) -> HtmlElement {
 
   let w_2 = width / 2.0;
   let h_2 = height / 2.0;
-  let radius = (if w_2 < h_2 { w_2 } else { h_2 }) * 0.8;
+  let radius = (if w_2 < h_2 { w_2 } else { h_2 }) * 0.9;
 
   let points = create_path_points(w_2, h_2, radius);
   let coeff = points[3].1 - points[2].1;
 
-  svg.add_child(create_svg_rect(0.0, 0.0, width, height, BG_COLOR));
-  svg.add_child(create_svg_path(&points, FG_COLOR));
+  svg.add_child(create_svg_rect(0.0, 0.0, width, height, palette.1));
+  svg.add_child(create_svg_path(&points, palette.0));
   svg.add_child(create_svg_line(
     points[2].0,
     points[2].1 + 0.15 * coeff,
     points[4].0 + 0.35 * coeff,
     points[4].1,
-    BG_COLOR,
+    palette.1,
     line_width,
   ));
   svg.add_child(create_svg_line(
@@ -91,16 +99,16 @@ fn create_svg(width: f64, height: f64, line_width: f64) -> HtmlElement {
     points[1].1,
     points[5].0,
     points[5].1 + 0.12 * coeff,
-    BG_COLOR,
+    palette.1,
     line_width,
   ));
-  svg.add_child(create_svg_line(points[1].0 + 0.11 * coeff, points[1].1, points[3].0, points[4].1, BG_COLOR, line_width));
+  svg.add_child(create_svg_line(points[1].0 + 0.11 * coeff, points[1].1, points[3].0, points[4].1, palette.1, line_width));
   svg.add_child(create_svg_line(
     points[1].0 + 0.65 * coeff,
     points[1].1,
     points[3].0 + 0.35 * coeff,
     points[4].1,
-    BG_COLOR,
+    palette.1,
     line_width,
   ));
   svg.add_child(create_svg_line(
@@ -108,7 +116,7 @@ fn create_svg(width: f64, height: f64, line_width: f64) -> HtmlElement {
     points[5].1 - 0.45 * coeff,
     points[4].0 + 0.35 * coeff,
     points[4].1,
-    BG_COLOR,
+    palette.1,
     line_width,
   ));
   svg
@@ -117,7 +125,14 @@ fn create_svg(width: f64, height: f64, line_width: f64) -> HtmlElement {
 fn main() {
   let head = HtmlHeadElement::default().charset("UTF-8").title("DSNTK LOGO");
   let mut body = HtmlBodyElement::default();
-  body.add_child(create_svg(700.0, 700.0, 7.0));
+  //body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_GREEN));
+  body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_LIGHT_GREEN));
+  //body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_BLUE));
+  body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_LIGHT_BLUE));
+  //body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_DEEP_PURPLE));
+  body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE));
+  body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_DEEP_ORANGE));
+  body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_YELLOW));
   let doc = HtmlDocument::new().default_doctype().default_language().default_namespace().head(head).body(body);
   doc.save("./out/dsntk-logo.html", 0, 2).expect("writing file failed");
 }
