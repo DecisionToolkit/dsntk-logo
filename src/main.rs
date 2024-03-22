@@ -79,7 +79,7 @@ fn create_svg(width: f64, height: f64, line_width: f64, palette: Palette) -> Htm
 
   let w_2 = width / 2.0;
   let h_2 = height / 2.0;
-  let radius = (if w_2 < h_2 { w_2 } else { h_2 }) * 0.9;
+  let radius = (if w_2 < h_2 { w_2 } else { h_2 }) * 0.7;
 
   let points = create_path_points(w_2, h_2, radius);
   let coeff = points[3].1 - points[2].1;
