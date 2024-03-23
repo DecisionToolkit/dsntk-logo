@@ -38,3 +38,24 @@ tasks:
     desc: Runs tests in debug mode
     cmds:
       - cmd: cargo +stable test
+
+  png:
+    desc: Generated PNG images
+    cmds:
+      - cmd: cargo run
+      - cmd: convert -size 700x700 out/decision-contracts-700-07.svg out/decision-contracts-700-07.png
+      - cmd: convert -size 300x300 out/decision-contracts-700-07.svg out/decision-contracts-300-07.png
+      - cmd: convert -size 700x700 out/decision-contracts-700-09.svg out/decision-contracts-700-09.png
+      - cmd: convert -size 300x300 out/decision-contracts-700-09.svg out/decision-contracts-300-09.png
+      - cmd: convert -size 700x700 out/decision-tables-700-07.svg out/decision-tables-700-07.png
+      - cmd: convert -size 300x300 out/decision-tables-700-07.svg out/decision-tables-300-07.png
+      - cmd: convert -size 700x700 out/decision-tables-700-09.svg out/decision-tables-700-09.png
+      - cmd: convert -size 300x300 out/decision-tables-700-09.svg out/decision-tables-300-09.png
+      - cmd: convert -size 700x700 out/decision-toolkit-700-07.svg out/decision-toolkit-700-07.png
+      - cmd: convert -size 300x300 out/decision-toolkit-700-07.svg out/decision-toolkit-300-07.png
+      - cmd: convert -size 700x700 out/decision-toolkit-700-09.svg out/decision-toolkit-700-09.png
+      - cmd: convert -size 300x300 out/decision-toolkit-700-09.svg out/decision-toolkit-300-09.png
+      - cmd: convert -size 700x700 out/decision-dmn-toolkit-700-07.svg out/decision-dmn-toolkit-700-07.png
+      - cmd: convert -size 300x300 out/decision-dmn-toolkit-700-07.svg out/decision-dmn-toolkit-300-07.png
+      - cmd: convert -size 700x700 out/decision-dmn-toolkit-700-09.svg out/decision-dmn-toolkit-700-09.png
+      - cmd: convert -size 300x300 out/decision-dmn-toolkit-700-09.svg out/decision-dmn-toolkit-300-09.png
