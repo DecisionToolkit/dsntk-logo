@@ -1,4 +1,4 @@
-**DSNTK** | **Decision Toolkit**
+### **DSNTK** | **Decision Toolkit**
 
 # Logo generator
 
