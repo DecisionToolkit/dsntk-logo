@@ -21,7 +21,7 @@ dsntk | Decision Toolkit
 
 Generates **Decision Toolkit** logos in SVG and PNG formats, like the one shown below:
 
-![dsntk-logo](./decision-toolkit.svg)
+![dsntk-logo](./out/decision-toolkit-300-09.png)
 
 More logos can be found [here](./out/README.md).
 
