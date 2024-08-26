@@ -1,6 +1,6 @@
 **DSNTK** | Decision Toolkit
 
-# Logo generator
+# Decision Toolkit logo generator
 
 [![MIT licensed][mit-badge]][mit-url]
 [![Apache 2.0 licensed][apache-badge]][apache-url]
