@@ -13,7 +13,7 @@ const PALETTE_DEEP_ORANGE: Palette = ("#FF9E80", "#BF360C");
 const PREFIX_DECISION_CONTRACTS: &str = "decision-contracts";
 const PREFIX_DECISION_TOOLKIT: &str = "decision-toolkit";
 const PREFIX_DECISION_TABLES: &str = "decision-tables";
-const PREFIX_DMN_TOOLKIT: &str = "decision-dmn-toolkit";
+const PREFIX_DMNTK: &str = "decision-dmntk";
 
 /// Converts degrees into radians.
 fn deg_to_rad(deg: f64) -> f64 {
@@ -125,7 +125,7 @@ fn create_svg(width: f64, height: f64, line_width: f64, palette: Palette, radius
 }
 
 fn save_svg(svg: HtmlElement, file_name: &str) {
-  fs::write(file_name, format!("{}", svg.to_text(0, 2))).expect("writing output file failed");
+  fs::write(file_name, svg.to_text(0, 2)).expect("writing output file failed");
 }
 
 fn file_name(prefix: &str, size: f64, radius_coeff: f64, ext: &str) -> String {
@@ -141,8 +141,8 @@ fn main() {
   let decision_contracts_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_LIGHT_BLUE, 0.7);
   let decision_tables_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_DEEP_ORANGE, 0.9);
   let decision_tables_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_DEEP_ORANGE, 0.7);
-  let decision_dmn_toolkit_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.9);
-  let decision_dmn_toolkit_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.7);
+  let decision_dmntk_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.9);
+  let decision_dmntk_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.7);
 
   body.add_child(decision_toolkit_700_09.clone());
   body.add_child(decision_toolkit_700_07.clone());
@@ -150,14 +150,14 @@ fn main() {
   body.add_child(decision_contracts_700_07.clone());
   body.add_child(decision_tables_700_09.clone());
   body.add_child(decision_tables_700_07.clone());
-  body.add_child(decision_dmn_toolkit_700_09.clone());
-  body.add_child(decision_dmn_toolkit_700_07.clone());
+  body.add_child(decision_dmntk_700_09.clone());
+  body.add_child(decision_dmntk_700_07.clone());
 
   body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_YELLOW, 0.9));
   body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_YELLOW, 0.7));
 
   let doc = HtmlDocument::new().default_doctype().default_language().default_namespace().head(head).body(body);
-  doc.save("./out/dsntk-logo.html", 0, 2).expect("writing file failed");
+  doc.save("./out/dsntk-logo.html", 0, 2).expect("writing output file failed");
 
   save_svg(decision_contracts_700_09, &file_name(PREFIX_DECISION_CONTRACTS, 700.0, 0.9, "svg"));
   save_svg(decision_contracts_700_07, &file_name(PREFIX_DECISION_CONTRACTS, 700.0, 0.7, "svg"));
@@ -165,6 +165,6 @@ fn main() {
   save_svg(decision_toolkit_700_07, &file_name(PREFIX_DECISION_TOOLKIT, 700.0, 0.7, "svg"));
   save_svg(decision_tables_700_09, &file_name(PREFIX_DECISION_TABLES, 700.0, 0.9, "svg"));
   save_svg(decision_tables_700_07, &file_name(PREFIX_DECISION_TABLES, 700.0, 0.7, "svg"));
-  save_svg(decision_dmn_toolkit_700_09, &file_name(PREFIX_DMN_TOOLKIT, 700.0, 0.9, "svg"));
-  save_svg(decision_dmn_toolkit_700_07, &file_name(PREFIX_DMN_TOOLKIT, 700.0, 0.7, "svg"));
+  save_svg(decision_dmntk_700_09, &file_name(PREFIX_DMNTK, 700.0, 0.9, "svg"));
+  save_svg(decision_dmntk_700_07, &file_name(PREFIX_DMNTK, 700.0, 0.7, "svg"));
 }

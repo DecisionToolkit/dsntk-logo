@@ -7,26 +7,19 @@
 [![Contributor Covenant][cc-badge]][cc-url]
 
 [mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg
-
 [mit-url]: https://opensource.org/licenses/MIT
-
 [mit-license-url]: LICENSE-MIT
-
 [apache-badge]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
-
 [apache-url]: https://www.apache.org/licenses/LICENSE-2.0
-
 [apache-license-url]: LICENSE
-
 [apache-notice-url]: NOTICE
-
 [cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
-
-[cc-url]: https://github.com/dsntk/dsntk-rs/blob/main/CODE_OF_CONDUCT.md
+[cc-url]: https://github.com/DecisionToolkit/dsntk-rs/blob/main/CODE_OF_CONDUCT.md
+[repository-url]: https://github.com/DecisionToolkit/dsntk-logo
 
 ## Overview
 
-Generates a **DSNTK** logo in SVG format, similar to the one shown below:
+This crate generates **Decision Toolkit** logos in SVG format, like the one shown below:
 
 ![dsntk-logo](./decision-toolkit.svg)
 
@@ -41,8 +34,6 @@ at your option.
 
 ## Contribution
 
-Any contributions are greatly appreciated.
-If you would like to get involved, please don't hesitate to reach out to us.
+Any contributions to [Logo generator][repository-url] are greatly appreciated.
 All contributions intentionally submitted for inclusion in the work by you,
 shall be dual licensed as above, without any additional terms or conditions.
-
