@@ -27,7 +27,7 @@ tasks:
   run:
     desc: Generates logo
     cmds:
-      - cmd: cargo run
+      - cmd: cargo +stable run
 
   test:
     desc: Runs tests in debug mode
