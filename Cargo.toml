@@ -1,6 +1,7 @@
 [package]
 name = "dsntk-logo"
 version = "1.0.0"
+publish = false
 authors = ["Dariusz Depta <depta@engos.de>"]
 repository = "https://github.com/DecisionToolkit/dsntk-logo.git"
 license = "MIT OR Apache-2.0"
