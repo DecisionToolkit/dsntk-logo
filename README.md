@@ -19,9 +19,11 @@
 
 ## Overview
 
-This crate generates **Decision Toolkit** logos in SVG format, like the one shown below:
+Generates **Decision Toolkit** logos in SVG and PNG formats, like the one shown below:
 
 ![dsntk-logo](./decision-toolkit.svg)
+
+More logos can be found [here](./out/README.md).
 
 ## License
 
