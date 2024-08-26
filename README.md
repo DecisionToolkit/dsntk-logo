@@ -14,7 +14,7 @@
 [apache-license-url]: LICENSE
 [apache-notice-url]: NOTICE
 [cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
-[cc-url]: https://github.com/DecisionToolkit/dsntk-rs/blob/main/CODE_OF_CONDUCT.md
+[cc-url]: https://github.com/DecisionToolkit/dsntk-logo/blob/main/CODE_OF_CONDUCT.md
 [repository-url]: https://github.com/DecisionToolkit/dsntk-logo
 
 ## Overview
