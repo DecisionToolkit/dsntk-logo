@@ -25,6 +25,13 @@ Generates **Decision Toolkit** logos in SVG and PNG formats, like the one shown 
 
 More logos can be found [here](./out/README.md).
 
+## Colors
+
+| Name        | Value   |
+|:-----------:|:-------:|
+| DARK GREEN  | #33691E | 
+| LIGHT GREEN | #64DD17 |
+
 ## License
 
 Licensed under either of
