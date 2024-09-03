@@ -54,3 +54,7 @@ tasks:
       - cmd: magick -size 300x300 out/decision-dmntk-700-07.svg out/decision-dmntk-300-07.png
       - cmd: magick -size 700x700 out/decision-dmntk-700-09.svg out/decision-dmntk-700-09.png
       - cmd: magick -size 300x300 out/decision-dmntk-700-09.svg out/decision-dmntk-300-09.png
+      - cmd: magick -size 700x700 out/decision-dsntk-700-07.svg out/decision-dsntk-700-07.png
+      - cmd: magick -size 300x300 out/decision-dsntk-700-07.svg out/decision-dsntk-300-07.png
+      - cmd: magick -size 700x700 out/decision-dsntk-700-09.svg out/decision-dsntk-700-09.png
+      - cmd: magick -size 300x300 out/decision-dsntk-700-09.svg out/decision-dsntk-300-09.png

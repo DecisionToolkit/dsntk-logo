@@ -5,14 +5,15 @@ use std::fs;
 
 type Palette = (&'static str, &'static str);
 
-const PALETTE_LIGHT_GREEN: Palette = ("#64DD17", "#33691E");
-const PALETTE_LIGHT_BLUE: Palette = ("#00B0FF", "#01579B");
+const PALETTE_GRAY: Palette = ("#90a4ae", "#37474f");
+const PALETTE_GREEN: Palette = ("#64DD17", "#33691E");
+const PALETTE_BLUE: Palette = ("#00B0FF", "#01579B");
 const PALETTE_PURPLE: Palette = ("#EA80FC", "#4A148C");
-const PALETTE_YELLOW: Palette = ("#FFEA00", "#F57F17");
-const PALETTE_DEEP_ORANGE: Palette = ("#FF9E80", "#BF360C");
-const PREFIX_DECISION_CONTRACTS: &str = "decision-contracts";
-const PREFIX_DECISION_TOOLKIT: &str = "decision-toolkit";
-const PREFIX_DECISION_TABLES: &str = "decision-tables";
+const PALETTE_ORANGE: Palette = ("#FF9E80", "#BF360C");
+const PREFIX_CONTRACTS: &str = "decision-contracts";
+const PREFIX_TOOLKIT: &str = "decision-toolkit";
+const PREFIX_TABLES: &str = "decision-tables";
+const PREFIX_DSNTK: &str = "decision-dsntk";
 const PREFIX_DMNTK: &str = "decision-dmntk";
 
 /// Converts degrees into radians.
@@ -135,14 +136,16 @@ fn file_name(prefix: &str, size: f64, radius_coeff: f64, ext: &str) -> String {
 fn main() {
   let head = HtmlHeadElement::default().charset("UTF-8").title("DSNTK LOGO");
   let mut body = HtmlBodyElement::default();
-  let decision_toolkit_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_LIGHT_GREEN, 0.9);
-  let decision_toolkit_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_LIGHT_GREEN, 0.7);
-  let decision_contracts_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_LIGHT_BLUE, 0.9);
-  let decision_contracts_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_LIGHT_BLUE, 0.7);
-  let decision_tables_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_DEEP_ORANGE, 0.9);
-  let decision_tables_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_DEEP_ORANGE, 0.7);
+  let decision_toolkit_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_GREEN, 0.9);
+  let decision_toolkit_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_GREEN, 0.7);
+  let decision_contracts_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_BLUE, 0.9);
+  let decision_contracts_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_BLUE, 0.7);
+  let decision_tables_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_ORANGE, 0.9);
+  let decision_tables_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_ORANGE, 0.7);
   let decision_dmntk_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.9);
   let decision_dmntk_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.7);
+  let decision_dsntk_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_GRAY, 0.9);
+  let decision_dsntk_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_GRAY, 0.7);
 
   body.add_child(decision_toolkit_700_09.clone());
   body.add_child(decision_toolkit_700_07.clone());
@@ -152,19 +155,20 @@ fn main() {
   body.add_child(decision_tables_700_07.clone());
   body.add_child(decision_dmntk_700_09.clone());
   body.add_child(decision_dmntk_700_07.clone());
-
-  body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_YELLOW, 0.9));
-  body.add_child(create_svg(700.0, 700.0, 7.0, PALETTE_YELLOW, 0.7));
+  body.add_child(decision_dsntk_700_09.clone());
+  body.add_child(decision_dsntk_700_07.clone());
 
   let doc = HtmlDocument::new().default_doctype().default_language().default_namespace().head(head).body(body);
   doc.save("./out/dsntk-logo.html", 0, 2).expect("writing output file failed");
 
-  save_svg(decision_contracts_700_09, &file_name(PREFIX_DECISION_CONTRACTS, 700.0, 0.9, "svg"));
-  save_svg(decision_contracts_700_07, &file_name(PREFIX_DECISION_CONTRACTS, 700.0, 0.7, "svg"));
-  save_svg(decision_toolkit_700_09, &file_name(PREFIX_DECISION_TOOLKIT, 700.0, 0.9, "svg"));
-  save_svg(decision_toolkit_700_07, &file_name(PREFIX_DECISION_TOOLKIT, 700.0, 0.7, "svg"));
-  save_svg(decision_tables_700_09, &file_name(PREFIX_DECISION_TABLES, 700.0, 0.9, "svg"));
-  save_svg(decision_tables_700_07, &file_name(PREFIX_DECISION_TABLES, 700.0, 0.7, "svg"));
+  save_svg(decision_contracts_700_09, &file_name(PREFIX_CONTRACTS, 700.0, 0.9, "svg"));
+  save_svg(decision_contracts_700_07, &file_name(PREFIX_CONTRACTS, 700.0, 0.7, "svg"));
+  save_svg(decision_toolkit_700_09, &file_name(PREFIX_TOOLKIT, 700.0, 0.9, "svg"));
+  save_svg(decision_toolkit_700_07, &file_name(PREFIX_TOOLKIT, 700.0, 0.7, "svg"));
+  save_svg(decision_tables_700_09, &file_name(PREFIX_TABLES, 700.0, 0.9, "svg"));
+  save_svg(decision_tables_700_07, &file_name(PREFIX_TABLES, 700.0, 0.7, "svg"));
   save_svg(decision_dmntk_700_09, &file_name(PREFIX_DMNTK, 700.0, 0.9, "svg"));
   save_svg(decision_dmntk_700_07, &file_name(PREFIX_DMNTK, 700.0, 0.7, "svg"));
+  save_svg(decision_dsntk_700_09, &file_name(PREFIX_DSNTK, 700.0, 0.9, "svg"));
+  save_svg(decision_dsntk_700_07, &file_name(PREFIX_DSNTK, 700.0, 0.7, "svg"));
 }

@@ -10,7 +10,7 @@ checksum = "fdda6acc74f0bfd12b77f1f72b5dda9e4147137af9d4e5cd91fa395bf1aa91b4"
 
 [[package]]
 name = "dsntk-logo"
-version = "1.0.0"
+version = "1.1.0"
 dependencies = [
  "domrs",
 ]

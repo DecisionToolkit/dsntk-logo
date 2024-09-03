@@ -103,3 +103,29 @@
 ### DMNTK | 300x300 | radius 0.7 | PNG 
 
 ![decision-dmntk-300-07](./decision-dmntk-300-07.png)
+
+## DSNTK
+
+### DSNTK | 700x700 | radius 0.9 | SVG 
+
+![decision-dsntk-700-09](./decision-dsntk-700-09.svg)
+
+### DSNTK | 700x700 | radius 0.7 | SVG 
+
+![decision-dsntk-700-07](./decision-dsntk-700-07.svg)
+
+### DSNTK | 700x700 | radius 0.9 | PNG 
+
+![decision-dsntk-700-09](./decision-dsntk-700-09.png)
+
+### DSNTK | 700x700 | radius 0.7 | PNG 
+
+![decision-dsntk-700-07](./decision-dsntk-700-07.png)
+
+### DSNTK | 300x300 | radius 0.9 | PNG 
+
+![decision-dsntk-300-09](./decision-dsntk-300-09.png)
+
+### DSNTK | 300x300 | radius 0.7 | PNG 
+
+![decision-dsntk-300-07](./decision-dsntk-300-07.png)
