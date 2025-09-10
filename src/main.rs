@@ -5,16 +5,16 @@ use std::fs;
 
 type Palette = (&'static str, &'static str);
 
-const PALETTE_GRAY: Palette = ("#90a4ae", "#37474f");
+const PALETTE_GREY: Palette = ("#90a4ae", "#37474f");
 const PALETTE_GREEN: Palette = ("#64DD17", "#33691E");
 const PALETTE_BLUE: Palette = ("#00B0FF", "#01579B");
 const PALETTE_PURPLE: Palette = ("#EA80FC", "#4A148C");
 const PALETTE_ORANGE: Palette = ("#FF9E80", "#BF360C");
-const PREFIX_CONTRACTS: &str = "decision-contracts";
-const PREFIX_TOOLKIT: &str = "decision-toolkit";
-const PREFIX_TABLES: &str = "decision-tables";
-const PREFIX_DSNTK: &str = "decision-dsntk";
-const PREFIX_DMNTK: &str = "decision-dmntk";
+const PREFIX_BLUE: &str = "blue";
+const PREFIX_GREEN: &str = "green";
+const PREFIX_ORANGE: &str = "orange";
+const PREFIX_GREY: &str = "grey";
+const PREFIX_PURPLE: &str = "purple";
 
 /// Converts degrees into radians.
 fn deg_to_rad(deg: f64) -> f64 {
@@ -85,39 +85,39 @@ fn create_svg(width: f64, height: f64, line_width: f64, palette: Palette, radius
   let radius = (if w_2 < h_2 { w_2 } else { h_2 }) * radius_coeff;
 
   let points = create_path_points(w_2, h_2, radius);
-  let coeff = points[3].1 - points[2].1;
+  let coefficient = points[3].1 - points[2].1;
 
   svg.add_child(create_svg_rect(0.0, 0.0, width, height, palette.1));
   svg.add_child(create_svg_path(&points, palette.0));
   svg.add_child(create_svg_line(
     points[2].0,
-    points[2].1 + 0.15 * coeff,
-    points[4].0 + 0.35 * coeff,
+    points[2].1 + 0.15 * coefficient,
+    points[4].0 + 0.35 * coefficient,
     points[4].1,
     palette.1,
     line_width,
   ));
   svg.add_child(create_svg_line(
-    points[1].0 - 0.23 * coeff,
+    points[1].0 - 0.23 * coefficient,
     points[1].1,
     points[5].0,
-    points[5].1 + 0.12 * coeff,
+    points[5].1 + 0.12 * coefficient,
     palette.1,
     line_width,
   ));
-  svg.add_child(create_svg_line(points[1].0 + 0.11 * coeff, points[1].1, points[3].0, points[4].1, palette.1, line_width));
+  svg.add_child(create_svg_line(points[1].0 + 0.11 * coefficient, points[1].1, points[3].0, points[4].1, palette.1, line_width));
   svg.add_child(create_svg_line(
-    points[1].0 + 0.65 * coeff,
+    points[1].0 + 0.65 * coefficient,
     points[1].1,
-    points[3].0 + 0.35 * coeff,
+    points[3].0 + 0.35 * coefficient,
     points[4].1,
     palette.1,
     line_width,
   ));
   svg.add_child(create_svg_line(
     points[0].0 + 2.0,
-    points[5].1 - 0.45 * coeff,
-    points[4].0 + 0.35 * coeff,
+    points[5].1 - 0.45 * coefficient,
+    points[4].0 + 0.35 * coefficient,
     points[4].1,
     palette.1,
     line_width,
@@ -134,41 +134,50 @@ fn file_name(prefix: &str, size: f64, radius_coeff: f64, ext: &str) -> String {
 }
 
 fn main() {
-  let head = HtmlHeadElement::default().charset("UTF-8").title("DSNTK LOGO");
+  let head = HtmlHeadElement::default().charset("UTF-8").title("LOGO");
   let mut body = HtmlBodyElement::default();
-  let decision_toolkit_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_GREEN, 0.9);
-  let decision_toolkit_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_GREEN, 0.7);
-  let decision_contracts_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_BLUE, 0.9);
-  let decision_contracts_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_BLUE, 0.7);
-  let decision_tables_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_ORANGE, 0.9);
-  let decision_tables_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_ORANGE, 0.7);
-  let decision_dmntk_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.9);
-  let decision_dmntk_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.7);
-  let decision_dsntk_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_GRAY, 0.9);
-  let decision_dsntk_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_GRAY, 0.7);
+  // green
+  let green_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_GREEN, 0.9);
+  let green_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_GREEN, 0.7);
+  // blue
+  let blue_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_BLUE, 0.9);
+  let blue_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_BLUE, 0.7);
+  // orange
+  let orange_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_ORANGE, 0.9);
+  let orange_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_ORANGE, 0.7);
+  // purple
+  let purple_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.9);
+  let purple_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_PURPLE, 0.7);
+  // grey
+  let grey_700_09 = create_svg(700.0, 700.0, 7.0, PALETTE_GREY, 0.9);
+  let grey_700_07 = create_svg(700.0, 700.0, 7.0, PALETTE_GREY, 0.7);
 
-  body.add_child(decision_toolkit_700_09.clone());
-  body.add_child(decision_toolkit_700_07.clone());
-  body.add_child(decision_contracts_700_09.clone());
-  body.add_child(decision_contracts_700_07.clone());
-  body.add_child(decision_tables_700_09.clone());
-  body.add_child(decision_tables_700_07.clone());
-  body.add_child(decision_dmntk_700_09.clone());
-  body.add_child(decision_dmntk_700_07.clone());
-  body.add_child(decision_dsntk_700_09.clone());
-  body.add_child(decision_dsntk_700_07.clone());
+  body.add_child(green_700_09.clone());
+  body.add_child(green_700_07.clone());
+  body.add_child(blue_700_09.clone());
+  body.add_child(blue_700_07.clone());
+  body.add_child(orange_700_09.clone());
+  body.add_child(orange_700_07.clone());
+  body.add_child(purple_700_09.clone());
+  body.add_child(purple_700_07.clone());
+  body.add_child(grey_700_09.clone());
+  body.add_child(grey_700_07.clone());
 
   let doc = HtmlDocument::new().default_doctype().default_language().default_namespace().head(head).body(body);
   doc.save("./out/dsntk-logo.html", 0, 2).expect("writing output file failed");
 
-  save_svg(decision_contracts_700_09, &file_name(PREFIX_CONTRACTS, 700.0, 0.9, "svg"));
-  save_svg(decision_contracts_700_07, &file_name(PREFIX_CONTRACTS, 700.0, 0.7, "svg"));
-  save_svg(decision_toolkit_700_09, &file_name(PREFIX_TOOLKIT, 700.0, 0.9, "svg"));
-  save_svg(decision_toolkit_700_07, &file_name(PREFIX_TOOLKIT, 700.0, 0.7, "svg"));
-  save_svg(decision_tables_700_09, &file_name(PREFIX_TABLES, 700.0, 0.9, "svg"));
-  save_svg(decision_tables_700_07, &file_name(PREFIX_TABLES, 700.0, 0.7, "svg"));
-  save_svg(decision_dmntk_700_09, &file_name(PREFIX_DMNTK, 700.0, 0.9, "svg"));
-  save_svg(decision_dmntk_700_07, &file_name(PREFIX_DMNTK, 700.0, 0.7, "svg"));
-  save_svg(decision_dsntk_700_09, &file_name(PREFIX_DSNTK, 700.0, 0.9, "svg"));
-  save_svg(decision_dsntk_700_07, &file_name(PREFIX_DSNTK, 700.0, 0.7, "svg"));
+  save_svg(blue_700_09, &file_name(PREFIX_BLUE, 700.0, 0.9, "svg"));
+  save_svg(blue_700_07, &file_name(PREFIX_BLUE, 700.0, 0.7, "svg"));
+
+  save_svg(green_700_09, &file_name(PREFIX_GREEN, 700.0, 0.9, "svg"));
+  save_svg(green_700_07, &file_name(PREFIX_GREEN, 700.0, 0.7, "svg"));
+
+  save_svg(orange_700_09, &file_name(PREFIX_ORANGE, 700.0, 0.9, "svg"));
+  save_svg(orange_700_07, &file_name(PREFIX_ORANGE, 700.0, 0.7, "svg"));
+
+  save_svg(purple_700_09, &file_name(PREFIX_PURPLE, 700.0, 0.9, "svg"));
+  save_svg(purple_700_07, &file_name(PREFIX_PURPLE, 700.0, 0.7, "svg"));
+
+  save_svg(grey_700_09, &file_name(PREFIX_GREY, 700.0, 0.9, "svg"));
+  save_svg(grey_700_07, &file_name(PREFIX_GREY, 700.0, 0.7, "svg"));
 }

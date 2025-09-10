@@ -1,131 +1,212 @@
 # Generated content
 
-## Decision Toolkit
+## Blue
 
-### Decision Toolkit | 700x700 | radius 0.9 | SVG 
+### Blue | 700x700 | radius 0.9 | SVG 
 
-![decision-toolkit-700-09](./decision-toolkit-700-09.svg)
+![blue-700-09](./blue-700-09.svg)
 
-### Decision Toolkit | 700x700 | radius 0.7 | SVG 
+### Blue | 700x700 | radius 0.7 | SVG 
 
-![decision-toolkit-700-07](./decision-toolkit-700-07.svg)
+![blue-700-07](./blue-700-07.svg)
 
-### Decision Toolkit | 700x700 | radius 0.9 | PNG 
+### Blue | 700x700 | radius 0.9 | PNG 
 
-![decision-toolkit-700-09](./decision-toolkit-700-09.png)
+![blue-700-09](./png/blue-700-09.png)
 
-### Decision Toolkit | 700x700 | radius 0.7 | PNG 
+### Blue | 700x700 | radius 0.7 | PNG 
 
-![decision-toolkit-700-07](./decision-toolkit-700-07.png)
+![blue-700-07](./png/blue-700-07.png)
 
-### Decision Toolkit | 300x300 | radius 0.9 | PNG 
+### Blue | 300x300 | radius 0.9 | PNG 
 
-![decision-toolkit-300-09](./decision-toolkit-300-09.png)
+![blue-300-09](./png/blue-300-09.png)
 
-### Decision Toolkit | 300x300 | radius 0.7 | PNG 
+### Blue | 300x300 | radius 0.7 | PNG 
 
-![decision-toolkit-300-07](./decision-toolkit-300-07.png)
+![blue-300-07](./png/blue-300-07.png)
 
-## Decision Tables
+### Blue | 700x700 | radius 0.9 | WebP 
 
-### Decision Tables | 700x700 | radius 0.9 | SVG 
+![blue-700-09](./webp/blue-700-09.webp)
 
-![decision-tables-700-09](./decision-tables-700-09.svg)
+### Blue | 700x700 | radius 0.7 | WebP 
 
-### Decision Tables | 700x700 | radius 0.7 | SVG 
+![blue-700-07](./webp/blue-700-07.webp)
 
-![decision-tables-700-07](./decision-tables-700-07.svg)
+### Blue | 300x300 | radius 0.9 | WebP 
 
-### Decision Tables | 700x700 | radius 0.9 | PNG 
+![blue-300-09](./webp/blue-300-09.webp)
 
-![decision-tables-700-09](./decision-tables-700-09.png)
+### Blue | 300x300 | radius 0.7 | WebP 
 
-### Decision Tables | 700x700 | radius 0.7 | PNG 
+![blue-300-07](./webp/blue-300-07.webp)
 
-![decision-tables-700-07](./decision-tables-700-07.png)
+## Green
 
-### Decision Tables | 300x300 | radius 0.9 | PNG 
+### Green | 700x700 | radius 0.9 | SVG 
 
-![decision-tables-300-09](./decision-tables-300-09.png)
+![green-700-09](./green-700-09.svg)
 
-### Decision Tables | 300x300 | radius 0.7 | PNG 
+### Green | 700x700 | radius 0.7 | SVG 
 
-![decision-tables-300-07](./decision-tables-300-07.png)
+![green-700-07](./green-700-07.svg)
 
-## Decision Contracts
+### Green | 700x700 | radius 0.9 | PNG 
 
-### Decision Contracts | 700x700 | radius 0.9 | SVG 
+![green-700-09](./png/green-700-09.png)
 
-![decision-contracts-700-09](./decision-contracts-700-09.svg)
+### Green | 700x700 | radius 0.7 | PNG 
 
-### Decision Contracts | 700x700 | radius 0.7 | SVG 
+![green-700-07](./png/green-700-07.png)
 
-![decision-contracts-700-07](./decision-contracts-700-07.svg)
+### Green | 300x300 | radius 0.9 | PNG 
 
-### Decision Contracts | 700x700 | radius 0.9 | PNG 
+![green-300-09](./png/green-300-09.png)
 
-![decision-contracts-700-09](./decision-contracts-700-09.png)
+### Green | 300x300 | radius 0.7 | PNG 
 
-### Decision Contracts | 700x700 | radius 0.7 | PNG 
+![green-300-07](./png/green-300-07.png)
 
-![decision-contracts-700-07](./decision-contracts-700-07.png)
+### Green | 700x700 | radius 0.9 | WebP 
 
-### Decision Contracts | 300x300 | radius 0.9 | PNG 
+![green-700-09](./webp/green-700-09.webp)
 
-![decision-contracts-300-09](./decision-contracts-300-09.png)
+### Green | 700x700 | radius 0.7 | WebP 
 
-### Decision Contracts | 300x300 | radius 0.7 | PNG 
+![green-700-07](./webp/green-700-07.webp)
 
-![decision-contracts-300-07](./decision-contracts-300-07.png)
+### Green | 300x300 | radius 0.9 | WebP 
 
-## DMNTK
+![green-300-09](./webp/green-300-09.webp)
 
-### DMNTK | 700x700 | radius 0.9 | SVG 
+### Green | 300x300 | radius 0.7 | WebP 
 
-![decision-dmntk-700-09](./decision-dmntk-700-09.svg)
+![green-300-07](./webp/green-300-07.webp)
 
-### DMNTK | 700x700 | radius 0.7 | SVG 
+## Grey
 
-![decision-dmntk-700-07](./decision-dmntk-700-07.svg)
+### Grey | 700x700 | radius 0.9 | SVG 
 
-### DMNTK | 700x700 | radius 0.9 | PNG 
+![grey-700-09](./grey-700-09.svg)
 
-![decision-dmntk-700-09](./decision-dmntk-700-09.png)
+### Grey | 700x700 | radius 0.7 | SVG 
 
-### DMNTK | 700x700 | radius 0.7 | PNG 
+![grey-700-07](./grey-700-07.svg)
 
-![decision-dmntk-700-07](./decision-dmntk-700-07.png)
+### Grey | 700x700 | radius 0.9 | PNG 
 
-### DMNTK | 300x300 | radius 0.9 | PNG 
+![grey-700-09](./png/grey-700-09.png)
 
-![decision-dmntk-300-09](./decision-dmntk-300-09.png)
+### Grey | 700x700 | radius 0.7 | PNG 
 
-### DMNTK | 300x300 | radius 0.7 | PNG 
+![grey-700-07](./png/grey-700-07.png)
 
-![decision-dmntk-300-07](./decision-dmntk-300-07.png)
+### Grey | 300x300 | radius 0.9 | PNG 
 
-## DSNTK
+![grey-300-09](./png/grey-300-09.png)
 
-### DSNTK | 700x700 | radius 0.9 | SVG 
+### Grey | 300x300 | radius 0.7 | PNG 
 
-![decision-dsntk-700-09](./decision-dsntk-700-09.svg)
+![grey-300-07](./png/grey-300-07.png)
 
-### DSNTK | 700x700 | radius 0.7 | SVG 
+### Grey | 700x700 | radius 0.9 | WebP 
 
-![decision-dsntk-700-07](./decision-dsntk-700-07.svg)
+![grey-700-09](./webp/grey-700-09.webp)
 
-### DSNTK | 700x700 | radius 0.9 | PNG 
+### Grey | 700x700 | radius 0.7 | WebP 
 
-![decision-dsntk-700-09](./decision-dsntk-700-09.png)
+![grey-700-07](./webp/grey-700-07.webp)
 
-### DSNTK | 700x700 | radius 0.7 | PNG 
+### Grey | 300x300 | radius 0.9 | WebP 
 
-![decision-dsntk-700-07](./decision-dsntk-700-07.png)
+![grey-300-09](./webp/grey-300-09.webp)
 
-### DSNTK | 300x300 | radius 0.9 | PNG 
+### Grey | 300x300 | radius 0.7 | WebP 
 
-![decision-dsntk-300-09](./decision-dsntk-300-09.png)
+![grey-300-07](./webp/grey-300-07.webp)
 
-### DSNTK | 300x300 | radius 0.7 | PNG 
+## Orange
 
-![decision-dsntk-300-07](./decision-dsntk-300-07.png)
+### Orange | 700x700 | radius 0.9 | SVG 
+
+![orange-700-09](./orange-700-09.svg)
+
+### Orange | 700x700 | radius 0.7 | SVG 
+
+![orange-700-07](./orange-700-07.svg)
+
+### Orange | 700x700 | radius 0.9 | PNG 
+
+![orange-700-09](./png/orange-700-09.png)
+
+### Orange | 700x700 | radius 0.7 | PNG 
+
+![orange-700-07](./png/orange-700-07.png)
+
+### Orange | 300x300 | radius 0.9 | PNG 
+
+![orange-300-09](./png/orange-300-09.png)
+
+### Orange | 300x300 | radius 0.7 | PNG 
+
+![orange-300-07](./png/orange-300-07.png)
+
+### Orange | 700x700 | radius 0.9 | WebP 
+
+![orange-700-09](./webp/orange-700-09.webp)
+
+### Orange | 700x700 | radius 0.7 | WebP 
+
+![orange-700-07](./webp/orange-700-07.webp)
+
+### Orange | 300x300 | radius 0.9 | WebP 
+
+![orange-300-09](./webp/orange-300-09.webp)
+
+### Orange | 300x300 | radius 0.7 | WebP 
+
+![orange-300-07](./webp/orange-300-07.webp)
+
+## Purple
+
+### Purple | 700x700 | radius 0.9 | SVG 
+
+![purple-700-09](./purple-700-09.svg)
+
+### Purple | 700x700 | radius 0.7 | SVG 
+
+![purple-700-07](./purple-700-07.svg)
+
+### Purple | 700x700 | radius 0.9 | PNG 
+
+![purple-700-09](./png/purple-700-09.png)
+
+### Purple | 700x700 | radius 0.7 | PNG 
+
+![purple-700-07](./png/purple-700-07.png)
+
+### Purple | 300x300 | radius 0.9 | PNG 
+
+![purple-300-09](./png/purple-300-09.png)
+
+### Purple | 300x300 | radius 0.7 | PNG 
+
+![purple-300-07](./png/purple-300-07.png)
+
+### Purple | 700x700 | radius 0.9 | WebP 
+
+![purple-700-09](./webp/purple-700-09.webp)
+
+### Purple | 700x700 | radius 0.7 | WebP 
+
+![purple-700-07](./webp/purple-700-07.webp)
+
+### Purple | 300x300 | radius 0.9 | WebP 
+
+![purple-300-09](./webp/purple-300-09.webp)
+
+### Purple | 300x300 | radius 0.7 | WebP 
+
+![purple-300-07](./webp/purple-300-07.webp)
+

@@ -25,7 +25,7 @@ tasks:
       - cmd: cargo +nightly fmt
 
   run:
-    desc: Generates logo
+    desc: Generate logo in SVG format
     cmds:
       - cmd: cargo +stable run
 
@@ -34,27 +34,57 @@ tasks:
     cmds:
       - cmd: cargo +stable test
 
-  png:
-    desc: Generated PNG images
+  out:
+    desc: Generates all images from SVG format
     cmds:
-      - cmd: cargo run
-      - cmd: magick -size 700x700 out/decision-contracts-700-07.svg out/decision-contracts-700-07.png
-      - cmd: magick -size 300x300 out/decision-contracts-700-07.svg out/decision-contracts-300-07.png
-      - cmd: magick -size 700x700 out/decision-contracts-700-09.svg out/decision-contracts-700-09.png
-      - cmd: magick -size 300x300 out/decision-contracts-700-09.svg out/decision-contracts-300-09.png
-      - cmd: magick -size 700x700 out/decision-tables-700-07.svg out/decision-tables-700-07.png
-      - cmd: magick -size 300x300 out/decision-tables-700-07.svg out/decision-tables-300-07.png
-      - cmd: magick -size 700x700 out/decision-tables-700-09.svg out/decision-tables-700-09.png
-      - cmd: magick -size 300x300 out/decision-tables-700-09.svg out/decision-tables-300-09.png
-      - cmd: magick -size 700x700 out/decision-toolkit-700-07.svg out/decision-toolkit-700-07.png
-      - cmd: magick -size 300x300 out/decision-toolkit-700-07.svg out/decision-toolkit-300-07.png
-      - cmd: magick -size 700x700 out/decision-toolkit-700-09.svg out/decision-toolkit-700-09.png
-      - cmd: magick -size 300x300 out/decision-toolkit-700-09.svg out/decision-toolkit-300-09.png
-      - cmd: magick -size 700x700 out/decision-dmntk-700-07.svg out/decision-dmntk-700-07.png
-      - cmd: magick -size 300x300 out/decision-dmntk-700-07.svg out/decision-dmntk-300-07.png
-      - cmd: magick -size 700x700 out/decision-dmntk-700-09.svg out/decision-dmntk-700-09.png
-      - cmd: magick -size 300x300 out/decision-dmntk-700-09.svg out/decision-dmntk-300-09.png
-      - cmd: magick -size 700x700 out/decision-dsntk-700-07.svg out/decision-dsntk-700-07.png
-      - cmd: magick -size 300x300 out/decision-dsntk-700-07.svg out/decision-dsntk-300-07.png
-      - cmd: magick -size 700x700 out/decision-dsntk-700-09.svg out/decision-dsntk-700-09.png
-      - cmd: magick -size 300x300 out/decision-dsntk-700-09.svg out/decision-dsntk-300-09.png
+      - task: run
+      - task: png
+      - task: webp
+
+  png:
+    desc: Generate PNG images from SVG format
+    cmds:
+      - cmd: magick -size 700x700 out/blue-700-07.svg out/png/blue-700-07.png
+      - cmd: magick -size 300x300 out/blue-700-07.svg out/png/blue-300-07.png
+      - cmd: magick -size 700x700 out/blue-700-09.svg out/png/blue-700-09.png
+      - cmd: magick -size 300x300 out/blue-700-09.svg out/png/blue-300-09.png
+      - cmd: magick -size 700x700 out/green-700-07.svg out/png/green-700-07.png
+      - cmd: magick -size 300x300 out/green-700-07.svg out/png/green-300-07.png
+      - cmd: magick -size 700x700 out/green-700-09.svg out/png/green-700-09.png
+      - cmd: magick -size 300x300 out/green-700-09.svg out/png/green-300-09.png
+      - cmd: magick -size 700x700 out/grey-700-07.svg out/png/grey-700-07.png
+      - cmd: magick -size 300x300 out/grey-700-07.svg out/png/grey-300-07.png
+      - cmd: magick -size 700x700 out/grey-700-09.svg out/png/grey-700-09.png
+      - cmd: magick -size 300x300 out/grey-700-09.svg out/png/grey-300-09.png
+      - cmd: magick -size 700x700 out/orange-700-07.svg out/png/orange-700-07.png
+      - cmd: magick -size 300x300 out/orange-700-07.svg out/png/orange-300-07.png
+      - cmd: magick -size 700x700 out/orange-700-09.svg out/png/orange-700-09.png
+      - cmd: magick -size 300x300 out/orange-700-09.svg out/png/orange-300-09.png
+      - cmd: magick -size 700x700 out/purple-700-07.svg out/png/purple-700-07.png
+      - cmd: magick -size 300x300 out/purple-700-07.svg out/png/purple-300-07.png
+      - cmd: magick -size 700x700 out/purple-700-09.svg out/png/purple-700-09.png
+      - cmd: magick -size 300x300 out/purple-700-09.svg out/png/purple-300-09.png
+
+  webp:
+    desc: Generate WebP images from SVG format
+    cmds:
+      - cmd: magick -size 700x700 out/blue-700-07.svg out/webp/blue-700-07.webp
+      - cmd: magick -size 300x300 out/blue-700-07.svg out/webp/blue-300-07.webp
+      - cmd: magick -size 700x700 out/blue-700-09.svg out/webp/blue-700-09.webp
+      - cmd: magick -size 300x300 out/blue-700-09.svg out/webp/blue-300-09.webp
+      - cmd: magick -size 700x700 out/green-700-07.svg out/webp/green-700-07.webp
+      - cmd: magick -size 300x300 out/green-700-07.svg out/webp/green-300-07.webp
+      - cmd: magick -size 700x700 out/green-700-09.svg out/webp/green-700-09.webp
+      - cmd: magick -size 300x300 out/green-700-09.svg out/webp/green-300-09.webp
+      - cmd: magick -size 700x700 out/grey-700-07.svg out/webp/grey-700-07.webp
+      - cmd: magick -size 300x300 out/grey-700-07.svg out/webp/grey-300-07.webp
+      - cmd: magick -size 700x700 out/grey-700-09.svg out/webp/grey-700-09.webp
+      - cmd: magick -size 300x300 out/grey-700-09.svg out/webp/grey-300-09.webp
+      - cmd: magick -size 700x700 out/orange-700-07.svg out/webp/orange-700-07.webp
+      - cmd: magick -size 300x300 out/orange-700-07.svg out/webp/orange-300-07.webp
+      - cmd: magick -size 700x700 out/orange-700-09.svg out/webp/orange-700-09.webp
+      - cmd: magick -size 300x300 out/orange-700-09.svg out/webp/orange-300-09.webp
+      - cmd: magick -size 700x700 out/purple-700-07.svg out/webp/purple-700-07.webp
+      - cmd: magick -size 300x300 out/purple-700-07.svg out/webp/purple-300-07.webp
+      - cmd: magick -size 700x700 out/purple-700-09.svg out/webp/purple-700-09.webp
+      - cmd: magick -size 300x300 out/purple-700-09.svg out/webp/purple-300-09.webp
