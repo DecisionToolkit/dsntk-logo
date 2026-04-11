@@ -1,6 +1,4 @@
-dsntk | Decision Toolkit
-
-# Logo generator
+**dsntk** | ÐecisionToolkit
 
 [![MIT licensed][mit-badge]][mit-url]
 [![Apache 2.0 licensed][apache-badge]][apache-url]
@@ -17,20 +15,22 @@ dsntk | Decision Toolkit
 [cc-url]: https://github.com/DecisionToolkit/dsntk-logo/blob/main/CODE_OF_CONDUCT.md
 [repository-url]: https://github.com/DecisionToolkit/dsntk-logo
 
+# Logo generator
+
 ## Overview
 
 Generates **Decision Toolkit** logos in SVG and PNG formats, like the one shown below:
 
-![dsntk-logo](./out/decision-toolkit-300-09.png)
+![dsntk-logo](./out/png/green-300-09.png)
 
 More logos can be found [here](./out/README.md).
 
 ## Colors
 
-| Name        | Value   |
-|:-----------:|:-------:|
-| DARK GREEN  | #33691E | 
-| LIGHT GREEN | #64DD17 |
+|    Name     |   Value   |
+|:-----------:|:---------:|
+| Dark green  | `#33691E` | 
+| Light green | `#64DD17` |
 
 ## License
 
